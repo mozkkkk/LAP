@@ -6,11 +6,6 @@ import torch
 
 # 论文题目：NAM: Normalization-based Attention Module
 # 中文题目:  NAM： 基于归一化的注意力模块
-# 论文链接：https://arxiv.org/pdf/2111.12419
-# 官方github：https://github.com/Christian-lyc/NAM
-# 所属机构：东北大学医学院和生物信息工程学院等
-# 关键词：归一化注意力、空间注意力、通道注意力、图像分类
-# 微信公众号：AI缝合术
 class Channel_Att(nn.Module):
     def __init__(self, channels, t=16):
         super(Channel_Att, self).__init__()
