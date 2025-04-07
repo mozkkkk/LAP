@@ -3,10 +3,6 @@ import torch
 import torch.nn as nn
 # 论文题目：Pinwheel-shaped Convolution and Scale-based Dynamic Loss for Infrared Small Target Detection
 # 中文题目：风车形状的卷积和基于尺度的动态损失用于红外小目标检测
-# 论文链接：https://arxiv.org/pdf/2412.16986
-# 官方github：https://github.com/JN-Yang/PConv-SDloss-Data
-# 所属机构：西南科技大学信息与工程学院，南京理工大学电子与光学工程学院
-# 代码整理：微信公众号《AI缝合术》
 def autopad(k, p=None, d=1):  # kernel, padding, dilation
     """Pad to 'same' shape outputs."""
     if d > 1:
