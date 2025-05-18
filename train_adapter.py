@@ -69,7 +69,7 @@ def get_args_parser():
                         help='path where to save, empty for no saving')
 
     parser.add_argument('--seed', default=3, type=int)
-    parser.add_argument('--resume', default='runs_adapter/best_mae.pth', help='resume from checkpoint')
+    parser.add_argument('--resume', default='runs/best_mae.pth', help='resume from checkpoint')
     parser.add_argument('--start_epoch', default=0, type=int, metavar='N',
                         help='start epoch')
     parser.add_argument('--eval', action='store_true')
