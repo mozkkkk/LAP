@@ -73,6 +73,7 @@ def get_args_parser():
     parser.add_argument('--start_epoch', default=0, type=int, metavar='N',
                         help='start epoch')
     parser.add_argument('--eval', action='store_true')
+    parser.add_argument('--resize', action='store_true')
     parser.add_argument('--num_workers', default=4, type=int)
     parser.add_argument('--eval_freq', default=2, type=int,
                         help='frequency of evaluation, default setting is evaluating in every 5 epoch')
