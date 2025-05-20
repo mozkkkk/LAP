@@ -58,12 +58,13 @@ class SHHA(Dataset):
 
         if self.resize and not self.train:
             ori_h,ori_w = img.shape[1:]
-            img = torch.nn.functional.interpolate(
-                img.unsqueeze(0),
-                size=[2048,2048],
-                mode='bilinear',
-                align_corners=False
-            ).squeeze(0)
+            if ori_h>2048 or ori_w>2048:
+                img = torch.nn.functional.interpolate(
+                    img.unsqueeze(0),
+                    size=[2048,2048],
+                    mode='bilinear',
+                    align_corners=False
+                ).squeeze(0)
 
         if self.train:
             # data augmentation -> random scale
