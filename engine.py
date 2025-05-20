@@ -193,7 +193,8 @@ def evaluate_crowd_no_overlap(model, data_loader, device, vis_dir=None, resize=T
 
         if resize:
             src = targets[0]['ori_size']
-            outputs_points = scale_coords_back(outputs_points,src,[h,w])
+            if h!=src[0] or w!=src[1]:
+                outputs_points = scale_coords_back(outputs_points,src,[h,w])
 
         #if random.random() < 0.3:
             #visualize_postproc_effects(samples, outputs_points, outputs_scores, targets[0]['point'], save_path=f"t_{vis_flag}.png")
