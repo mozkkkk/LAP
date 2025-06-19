@@ -16,7 +16,6 @@ class Channel_Att(nn.Module):
         x = torch.sigmoid(x) * residual
         return x
         
-# 注：作者未开源空间注意力代码，以下代码由《微信公众号：AI缝合术》提供.
 class Spatial_Att(nn.Module):
     def __init__(self, kernel_size=7):
         super(Spatial_Att, self).__init__()
